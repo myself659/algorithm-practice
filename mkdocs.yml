@@ -1,0 +1,14 @@
+site_name: algorithm-pratice
+nav:     
+  - Home: index.md     
+  - About: about.md
+  - Contacts: contacts.md
+theme: 
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - c 
+        - rust 
+        - golang
+        - c++
