@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>array - algorithm-pratice</title>
+  <title>数组array - algorithm-practice</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "array";
+    var mkdocs_page_name = "\u6570\u7ec4array";
     var mkdocs_page_input_path = "array.md";
     var mkdocs_page_url = null;
   </script>
@@ -41,7 +41,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> algorithm-pratice</a>
+        <a href=".." class="icon icon-home"> algorithm-practice</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -78,7 +78,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">algorithm-pratice</a>
+        <a href="..">algorithm-practice</a>
       </nav>
 
       
@@ -90,7 +90,7 @@
     
       
     
-    <li>array</li>
+    <li>数组array</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -100,18 +100,101 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="array">array</h1>
+                <h1 id="array">数组array</h1>
 <p>数组是一种容器，其特征如下：</p>
-<h2 id="_1">特征</h2>
+<h1 id="_1">特征</h1>
 <ol>
 <li>有边界，数组有一个长度限制 </li>
-<li>数组成员类型是相同的</li>
-<li>数据成员类型是多样的</li>
-<li>地址连续</li>
-<li>属于一种key-value的数据结构，数组的index相当于key，数组可以看作为一种没有hash冲突的hash表</li>
-<li>cache友好  </li>
+<li>数组成员类型是相同的(c/cpp, golang, rust)</li>
+<li>地址连续，index连续</li>
+<li>属于一种key-value的数据结构，数组的index相当于key，对应元素为value，数组可以看作为一种没有hash冲突的hash表,可以将数组看成一种特殊的map</li>
+<li>cache友好 </li>
+<li>不利于删除一个元素和添加一个元素 </li>
+<li>数组扩容方面不支持动态扩容</li>
+<li>十分灵活的元素访问方式，支持根据index访问任何一个元素，不像链表必须从头开始，或者要获取到节点的地址</li>
 </ol>
-<h2 id="_2">操作</h2>
+<h1 id="_2">分类</h1>
+<h2 id="_3">长度是否固定</h2>
+<ol>
+<li>静态数组 </li>
+<li>动态数组 </li>
+</ol>
+<h1 id="_4">操作</h1>
+<h2 id="_5">创建数组</h2>
+<h2 id="_6">遍历</h2>
+<p>基本方式：</p>
+<ol>
+<li>正向遍历</li>
+<li>反向遍历</li>
+<li>双向遍历（双指针）</li>
+</ol>
+<h1 id="_7">数组的特征</h1>
+<h2 id="_8">重复元素</h2>
+<pre><code>一个长度为n+1的数组，包含的数是1到n，其中有一个数至少出现了两次，请找到它。
+
+例如，
+输入：[3,2,4,2,1]
+输出：2
+
+</code></pre>
+
+<h2 id="_9">缺少元素</h2>
+<p><a href="https://medium.com/@briandsalemi/how-to-solving-the-missing-number-question-33b0426a9ba5">How To: Solving the ‘Missing Number’ Question</a></p>
+<p>1到n少了其中一个数据，找出缺失的这个数据。</p>
+<p>异或的语句。</p>
+<h2 id="_10">多数元素</h2>
+<p>多数元素是指一个元素在个数超过了一半。
+https://medium.com/swlh/finding-the-majority-element-is-your-solution-efficient-enough-2a6b49a75cb8 </p>
+<p>第一步：找出出现次数最多的元素 
+第二步： 判断这个元素是否超过了半数 </p>
+<h2 id="_11">数组乘积</h2>
+<p><a href="https://medium.com/swlh/solve-the-problem-before-coding-it-up-f019653fb9ea">Solve the problem before coding it up</a></p>
+<p><a href="https://leetcode.com/problems/product-of-array-except-self/">238. Product of Array Except Self</a></p>
+<p>思路：
+以此为例</p>
+<pre><code>Input:  [1,2,3,4]
+Output: [24,12,8,6]
+</code></pre>
+
+<p>正序：
+increaseArray = [1, 1, 2, 6] </p>
+<pre><code>increaseArray[0] = 1
+increaseArray[1] = increaseArray[0]*data[1-0] = 
+</code></pre>
+
+<p>反序：
+[24,12,4, 1]</p>
+<pre><code>decreaseArray[3] = 1
+decreaseArray[2] = decreaseArray[3]*data[3-i]
+</code></pre>
+
+<p>两者相乘：</p>
+<p>[24,12,8, 6]</p>
+<h2 id="_12">子数组</h2>
+<p><a href="https://leetcode.com/problems/maximum-subarray/">Maximum Subarray</a></p>
+<p><a href="https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/">Maximum Sum of Two Non-Overlapping Subarrays</a></p>
+<h1 id="_13">数组合并</h1>
+<p><a href="https://medium.com/outco/how-to-merge-k-sorted-arrays-c35d87aa298e">How to Merge K Sorted Arrays</a> </p>
+<h1 id="_14">数组并不是数组</h1>
+<p>用数组表示堆。</p>
+<h1 id="_15">字符串也是一种数组</h1>
+<h1 id="_16">光用数组并不能解决所有的问题</h1>
+<p>解决问题需要结合其他的数据结构</p>
+<h1 id="slide-windows">slide windows</h1>
+<p>题目类型分为两种：</p>
+<ol>
+<li>固定子数组的长度，如找到最大值或最小值  </li>
+<li>不固定长度，如找到子数组之和等于指定的数值 </li>
+</ol>
+<p><a href="https://leetcode.com/problems/sliding-window-maximum/description/">239. Sliding Window Maximum</a></p>
+<p><a href="https://leetcode.com/problems/find-median-from-data-stream/">leetcode-295 Find Median from Data Stream</a></p>
+<p><a href="https://leetcode.com/problems/sliding-window-median/">480. Sliding Window Median</a></p>
+<h1 id="leetcode">leetcode</h1>
+<ol>
+<li><a href="https://medium.com/@timothyhuang514/binary-search-find-k-th-smallest-pair-distance-91cce923c273">Binary Search — Find K-th Smallest Pair Distance</a></li>
+<li><a href="https://medium.com/@gaurav_52429/divide-and-conquer-paradigm-in-algorithms-ef43fb2222f5">Divide and Conquer Paradigm in Algorithms.</a></li>
+<li><a href="https://leetcode.com/problems/two-sum/">Two Sum</a></li>
+</ol>
               
             </div>
           </div>

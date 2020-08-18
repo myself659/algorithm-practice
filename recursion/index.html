@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>About - algorithm-practice</title>
+  <title>recursion - algorithm-practice</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
-    var mkdocs_page_input_path = "about.md";
+    var mkdocs_page_name = "recursion";
+    var mkdocs_page_input_path = "recursion.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -58,18 +58,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">About</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#about-doc">about doc</a></li>
-    
-
-    <li class="toctree-l2"><a href="#about-author">about author</a></li>
-    
-
-    </ul>
+    <a class="" href="../about/">About</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -99,7 +90,7 @@
     
       
     
-    <li>About</li>
+    <li>recursion</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -109,23 +100,87 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="about-doc">about doc</h1>
-<p>Build by mkdocs, the <a href="https://mkdocs.github.io/mkdocs-bootswatch/">theme</a> is readthedocs.</p>
-<h1 id="about-author">about author</h1>
-<p>Please visit <a href="https://blog.ipds.top/">my blog</a>! </p>
+                <h1 id="recursion">recursion</h1>
+<p>递归是一种top-down的思维方式。</p>
+<p>A recursive function is a function that calls itself until a “base condition” is true, and execution stops.</p>
+<p>递归体现了代码的利用。</p>
+<p>A function calling itself.</p>
+<h1 id="_1">注意</h1>
+<h2 id="_2">分解与组合要正确</h2>
+<h2 id="_3">死循环</h2>
+<p>一定要找到正确的结束条件。</p>
+<h2 id="stack-overflow">stack overflow</h2>
+<p>递归的实现离不开堆栈。</p>
+<h1 id="vs-iteration">vs iteration</h1>
+<p>以树的三种遍历由递归转成迭代的实现。</p>
+<h1 id="steps">steps</h1>
+<p>以常见的fib问题为例。</p>
+<pre><code>function fib(n) {
+
+}
+</code></pre>
+
+<h2 id="step-1">step-1  理解问题定义问题函数</h2>
+<pre><code>int fib(int n) {
+
+}
+</code></pre>
+
+<p>也就是三个问题：</p>
+<ol>
+<li>函数名 </li>
+<li>函数入参</li>
+<li>函数返回值  </li>
+</ol>
+<h2 id="step-2">step-2 找到子问题 （分解成子问题）</h2>
+<p>重要公式：</p>
+<pre><code>fib(n) =   fib(n-1) + fib(n -2)
+</code></pre>
+
+<p>题中是将fib(n)分为两个两个问题：fib(n-1)，fib(n -2)</p>
+<pre><code>int fib(int n) {
+
+  int prefib = fib(n-1);
+  int preprefib = fib(n-2);
+}
+</code></pre>
+
+<h2 id="step-3">step-3 应用子问题 （组合子问题）</h2>
+<pre><code>int fib(int n) {
+
+  int prefib = fib(n-1);
+  int preprefib = fib(n-2);
+
+  return preprefib+ prefib; 
+}
+</code></pre>
+
+<p>将两个子问题组合起来。</p>
+<h2 id="step-4">step-4  递归结束的条件及最基本的子问题</h2>
+<pre><code>int fib(int n) {
+  if(0 == n) return 1;
+  if(1 == n) return 1;
+
+  int prefib = fib(n-1);
+  int preprefib = fib(n-2);
+
+  return preprefib+ prefib; 
+}
+</code></pre>
+
+<h2 id="step-5">step-5  整个过程的可视化，加强理解</h2>
+<p>调用与返回的整个过程。 </p>
+<pre><code>call(3)   
+    call(2)
+        call(1) 
+        return (1)
+    return (1+2)
+return(1+2+3) 
+</code></pre>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../contacts/" class="btn btn-neutral float-right" title="Contacts">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -149,10 +204,6 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../contacts/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>About - algorithm-practice</title>
+  <title>指针 - algorithm-practice</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
-    var mkdocs_page_input_path = "about.md";
+    var mkdocs_page_name = "\u6307\u9488";
+    var mkdocs_page_input_path = "list.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -58,18 +58,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">About</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#about-doc">about doc</a></li>
-    
-
-    <li class="toctree-l2"><a href="#about-author">about author</a></li>
-    
-
-    </ul>
+    <a class="" href="../about/">About</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -99,7 +90,7 @@
     
       
     
-    <li>About</li>
+    <li>指针</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -109,23 +100,35 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="about-doc">about doc</h1>
-<p>Build by mkdocs, the <a href="https://mkdocs.github.io/mkdocs-bootswatch/">theme</a> is readthedocs.</p>
-<h1 id="about-author">about author</h1>
-<p>Please visit <a href="https://blog.ipds.top/">my blog</a>! </p>
+                <h1 id="_1">指针</h1>
+<p>谈链表要从指针说起。</p>
+<p>indrect思想。</p>
+<h1 id="_2">优点</h1>
+<ol>
+<li>便于插入与删除 </li>
+<li>长度空间灵活</li>
+</ol>
+<h1 id="_3">缺点</h1>
+<ol>
+<li>不支持index访问元素，访问元素时间复杂度为O(n) </li>
+<li>内存不连续</li>
+<li>相比较于数组，占用更多的存储空间  </li>
+</ol>
+<h1 id="_4">分类</h1>
+<ol>
+<li>单向链表 </li>
+<li>双向链表 </li>
+</ol>
+<h1 id="list">计算list长度</h1>
+<p>直接根据链表头遍历到尾。</p>
+<h1 id="_5">检查链表是否存在环</h1>
+<p>快慢指针。</p>
+<h1 id="_6">查找链表的中间节点</h1>
+<p>快慢指针。</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../contacts/" class="btn btn-neutral float-right" title="Contacts">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -149,10 +152,6 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../contacts/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

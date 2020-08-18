@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>About - algorithm-practice</title>
+  <title>build - algorithm-practice</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
-    var mkdocs_page_input_path = "about.md";
+    var mkdocs_page_name = "build";
+    var mkdocs_page_input_path = "tree.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -58,18 +58,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">About</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#about-doc">about doc</a></li>
-    
-
-    <li class="toctree-l2"><a href="#about-author">about author</a></li>
-    
-
-    </ul>
+    <a class="" href="../about/">About</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -99,7 +90,7 @@
     
       
     
-    <li>About</li>
+    <li>build</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -109,23 +100,36 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="about-doc">about doc</h1>
-<p>Build by mkdocs, the <a href="https://mkdocs.github.io/mkdocs-bootswatch/">theme</a> is readthedocs.</p>
-<h1 id="about-author">about author</h1>
-<p>Please visit <a href="https://blog.ipds.top/">my blog</a>! </p>
+                <h1 id="build">build</h1>
+<p>https://medium.com/swlh/leetcode-construct-binary-tree-from-inorder-and-postorder-traversal-db2d9926577c </p>
+<h1 id="traversal">traversal</h1>
+<p>https://levelup.gitconnected.com/binary-tree-traversal-depth-first-in-order-algorithm-visually-explained-352a744f15a8 </p>
+<p>https://levelup.gitconnected.com/breadth-first-search-bfs-algorithm-visually-explained-8dec1f514a6e </p>
+<p>https://towardsdatascience.com/4-types-of-tree-traversal-algorithms-d56328450846</p>
+<h1 id="greedy-algorithms">Greedy Algorithms</h1>
+<p>https://levelup.gitconnected.com/greedy-algorithms-2999d1367828 </p>
+<p>Kruskal’s algorithm, Prim’s algorithm, and Dijkstra’s algorithm. 
+在这三个算法得到体现。</p>
+<h1 id="shortest-path">shortest path</h1>
+<h2 id="bellman-ford-algorithm">Bellman-Ford Algorithm</h2>
+<p>https://medium.com/dev-genius/bellman-ford-algorithm-visually-explained-e940b6edb00a</p>
+<p>input：</p>
+<p>节点 与权重 </p>
+<p>process：</p>
+<p>step 0 ：
+起点 权重表（起点为0 其他为无穷大） 
+step 1 ：
+根据input，更新权重 
+更新每个节点上一跳节点
+找到第一个起点 
+根据当前连接的节点，找到下一个可以连接的节点 </p>
+<p>起点下一个可以连接点 </p>
+<p>下一个连接点的下一个可连接点 </p>
+<p>最小值比较  比较最小值  如果比当前值小就替换 </p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../contacts/" class="btn btn-neutral float-right" title="Contacts">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -149,10 +153,6 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../contacts/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
